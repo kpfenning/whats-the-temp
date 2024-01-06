@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>What's the Weather?</h1>
+    </header>
+
+    <main class="main-container" id="mainContainer">
+        <div class="search-container">
+            <h1>City Search</h1>
+            <form id="search-city">
+                <input name="city" type="text" placeholder="Portland" id="city" class="city-search">
+                <button type="submit" id="searchBtn" class="searchButton">Search</button>
+
+            </form>
+            <div id="history"></div>
+        </div>
+
+        <div class="forecast-container">
+            <div id="forecast" class="forecast">
+
+            </div>
+        </div>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    
+</body>
+</html>

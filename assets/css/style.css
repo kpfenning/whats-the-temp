@@ -1,0 +1,55 @@
+* {
+    margin: 0 auto;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    background-color: rgb(25, 25, 224);
+}
+
+.header {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.search-container h1 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 2rem auto;
+}
+
+.city-search {
+    font-size: 15px;
+    width: 25%;
+    border-radius: 2px;
+    border: 1px solid black;
+    height: 25px;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+}
+
+#searchBtn {
+    margin-bottom: 2rem;
+    background-color: gray;
+    color: black;
+}
+
+.searchButton {
+    font-size: 15;
+    width: 10%;
+    background-color: aquamarine;
+    color: black;
+    margin-top: 2rem;
+    padding: 2px;
+}
