@@ -8,17 +8,28 @@
 </head>
 <body>
     <header class="header">
-        <h1>What's the Weather?</h1>
+        <div class="header-container">
+            <h1 class="h1-text">What's the Weather?</h1>
+        </div>
     </header>
 
-    <main class="main-container" id="mainContainer">
-        <div class="search-container">
-            <h1>City Search</h1>
-            <form id="search-city">
-                <input name="city" type="text" placeholder="Portland" id="city" class="city-search">
-                <button type="submit" id="searchBtn" class="searchButton">Search</button>
-
-            </form>
+    <main class="main" id="main">
+        <div class="main-container">
+            <div class="page-content">
+                <div class="col-1">
+                    <div class="form-container">
+                        <form id="search-city">
+                            <div class="form-group">
+                                <div class="search-label">
+                                    <label for="city">Search for a city</label>
+                                </div>
+                                <input name="city" type="text" placeholder="Portland" id="city" class="city-search">
+                                <button type="submit" id="searchBtn" class="searchButton">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div id="history"></div>
         </div>
 
