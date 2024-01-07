@@ -1,14 +1,23 @@
 var apiKey = "6266ba4a3f32a524499faffac708e3b9";
 
+var searchHistory = $("#history-list");
+var searchCity = $("#city-search");
+var searchBtn = $("#searchButton");
+var clearHistory = $("#clear-history");
 
-var currentWeather = function (city) {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={apiKey}`)
-    .then(function (response) {
-        return response.json();
-     })
-     .then(function (response) {
-        var cityLon = response.city.coord.lon;
-        var cityLat = response.city.coord.lat;
+var currentCity = $("#current-city");
+var currentTemp = $("#current-temp");
+var currentHumidity = $("#current-humid");
+var currentWind = $("#wind-speed");
+var currentUV = $("#uv-index");
+
+var weatherContent = $("#forecast");
+var cities = [];
+
+var currentDate = moment().format("L");
+$("#current-date").text(currentDate);
+
+
 
         
          
