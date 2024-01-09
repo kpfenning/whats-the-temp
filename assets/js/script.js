@@ -9,5 +9,29 @@ var weeklyForecast = document.querySelector('.weekly-forecast');
 
 var recentSearches = [];
 
+function getCity() {
+    var cityName = city.value;
+    var cityRequest = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey;
+
+    fetch(cityRequest)
+    .then(function (response) {
+        return response.json();
+     })
+     .then(function (data) {
+        var pastSearches = document.createElement('button');
+        pastSearches.textContent = cityName;
+        pastStorageContainer(data[0]);
+        searchHistory.appendChild(pastSearches);
+
+        let lat = data[0].lat;
+        let lon = data[0].lon;
+
+        locateCity(lat, lon);
+     });
+    }
+
+    
+
+
 
         
