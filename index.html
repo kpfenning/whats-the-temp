@@ -13,60 +13,26 @@
         </div>
     </header>
 
-    <main class="main" id="main">
-        <div class="main-container">
-            <div class="page-content">
-                <div class="col-1">
-                    <div class="form-container">
-                        <form id="search-city">
-                            <div class="form-group">
-                                <div class="search-label">
-                                    <label for="city">Search for a city</label>
-                                </div>
-                                <input name="city" type="text" placeholder="Portland" id="city" class="city-search">
-                                <button type="submit" id="searchBtn" class="searchButton">Search</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div id="history" class="col-1">
-                <ul class="history-list">
-                    <li class="history-item">
-                </ul>
-                <button id="clear-history" class="clear-history">Clear History</button>
-            </div>
-        </div>
+    <div class="search-container">
+        <form>
+            <h2>Search a City:</h2>
+            <input type="text" id="city-name" placeholder="City Name">
+            <button type="submit" id="search-btn">Search</button>
+        </form>
+        <h4>Search History</h4>
+        <div id="search-history"></div>
+    </div>
 
-        <div class="col-2">
+    <div class="current-forecast"></div>
+
             <div class="forecast-container">
-                <div class="current-forecast">
-                    <div id="forecast" class="forecast">
-                        <h2 id="current-city">City Information <small class="current-date"></small></h2>
-                        <p class="details">Temperature: <span id="current-temp"></span> </p>
-                        <p class="details">Humidity: <span id="current-humid"></span></p>
-                        <p class="details"> Wind Speed: <span id="wind-speed"></span></p>
-                        <p>UV Index: <span id="uv-index"></span></p>
-                    </div>
-                </div>
+                <h3 class="forecast-city"></h3>
+                    <div class="weekly-forecast"></div>
+                    <div class="weather"></div>
             </div>
-            <div id="five-days" class="col-2">
-                <h3> Five Day Forecast</h3>
-            </div>
-            <div id="five-day-forecast" class="col-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Date</h5>
-                        <p class="card-text">Temp:</p>
-                        <p class="card-text">Humidity:</p>
-                    </div>
-                </div>
-        </div>
+                
 
-    </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    
     <script src="./assets/js/script.js"></script>
     
 </body>
