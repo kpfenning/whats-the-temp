@@ -10,7 +10,7 @@ var weeklyForecast = document.querySelector('.weekly-forecast');
 var recentSearches = [];
 
 function getCity() {
-    var cityName = city.value;
+    var cityName = currentCity.value;
     var cityRequest = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey;
 
     fetch(cityRequest)
@@ -40,12 +40,35 @@ function getCity() {
          .then(function (data) {
             forecastContainer.innerHTML = "";
 
-            let city = data.city.name;
+            let city = data.currentCity.name;
             let todaysForecast = data.list[0];
             let todaysContainer = document.querySelector('.current-forecast');
             let date = dayjs(todaysForecast.dt_text).day(0, 'days').format('dddd, MMMM Do');
 
+            let todaysWeather = document.createElement('div');
+            todaysWeather.innerHTML =
+            `<h4>${city}` + `(${date})` + `</h3>` + `<p> Temp: ${todaysForecast.main.temp} F </p>` + `<p> Humidity: ${todaysForecast.main.humidity} % </p>` + `<p>Wind: ${todaysForecast.wind.speed} mph </p>`;
+
+            todaysContainer.innerHTML = '';
+            
+
+
          })}
+
+         function pastStorageContainer(recent) {
+            var page = JSON.parse(localStorage.getItem('cityName')) || [];
+            page.push(recent);
+            localStorage.setItem('cityName', JSON.stringify(page));
+         }
+
+
+        
+
+         searchBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            getCity();
+         });
+
 
 
 
