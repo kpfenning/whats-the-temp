@@ -30,6 +30,40 @@ function getCity() {
      });
     }
 
+    function locateCity(lat, lon) {
+        var latLonRequest =
+        "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=hourly,minutely&appid=" + apiKey;
+        fetch(latLonRequest)
+        .then(function (response) {
+            return response.json();
+         })
+         .then(function (data) {
+            forecastContainer.innerHTML = "";
+
+            let city = data.city.name;
+            let todaysForecast = data.list[0];
+            let todaysContainer = document.querySelector('.current-forecast');
+            let date = dayjs(todaysForecast.dt_text).day(0, 'days').format('dddd, MMMM Do');
+
+         })}
+
+
+
+  
+    
+        
+        
+
+       
+    
+       
+       
+        
+        
+      
+  
+
+
     
 
 
